@@ -1,0 +1,25 @@
+services:
+   - type: web
+     name: n8n
+     runtime: docker
+     env: docker
+     plan: free
+     envVars:
+       - key: N8N_BASIC_AUTH_ACTIVE
+         value: true
+       - key: N8N_BASIC_AUTH_USER
+         value: AGC
+       - key: N8N_BASIC_AUTH_PASSWORD
+         value: QAZwsxEDCrfv123
+       - key: DB_TYPE
+         value: postgresdb
+       - key: DB_POSTGRESDB_DATABASE
+         value: n8n
+       - key: DB_POSTGRESDB_HOST
+         value: your-postgres-host
+       - key: DB_POSTGRESDB_PORT
+         value: 5432
+       - key: DB_POSTGRESDB_USER
+         value: your-postgres-user
+       - key: DB_POSTGRESDB_PASSWORD
+         value: your-postgres-password
