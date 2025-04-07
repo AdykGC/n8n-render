@@ -1,4 +1,4 @@
-services:
+services: 
    - type: web
      name: n8n
      runtime: docker
@@ -23,3 +23,12 @@ services:
          value: postgres-user
        - key: DB_POSTGRESDB_PASSWORD
          value: postgres-password
+       # Добавьте эти переменные для настройки URL
+       - key: N8N_HOST
+         value: n8n-render-lrjf.onrender.com
+       - key: N8N_PROTOCOL
+         value: https
+       - key: N8N_PORT
+         value: 443
+       - key: WEBHOOK_TUNNEL_URL
+         value: https://n8n-render-lrjf.onrender.com
