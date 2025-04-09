@@ -5,12 +5,24 @@ services:
      env: docker
      plan: free
      envVars:
+      # Добавьте эти переменные для настройки URL
        - key: N8N_BASIC_AUTH_ACTIVE
          value: true
        - key: N8N_BASIC_AUTH_USER
          value: username
        - key: N8N_BASIC_AUTH_PASSWORD
          value: password
+       - key: N8N_HOST
+         value: N8N-Host-Value
+       - key: N8N_PROTOCOL
+         value: N8N-Protocol-Value
+       - key: N8N_PORT
+         value: N8N-Port-Value
+       - key: WEBHOOK_TUNNEL_URL
+         value: N8N-Tunnel-Value
+       - key: WEBHOOK_URL
+         value: N8N-Url-Value
+      # Добавьте эти переменные для настройки URL
        - key: DB_TYPE
          value: postgresdb
        - key: DB_POSTGRESDB_DATABASE
@@ -23,12 +35,3 @@ services:
          value: postgres-user
        - key: DB_POSTGRESDB_PASSWORD
          value: postgres-password
-       # Добавьте эти переменные для настройки URL
-       - key: N8N_HOST
-         value: n8n-render-lrjf.onrender.com
-       - key: N8N_PROTOCOL
-         value: https
-       - key: N8N_PORT
-         value: 443
-       - key: WEBHOOK_TUNNEL_URL
-         value: https://n8n-render-lrjf.onrender.com
